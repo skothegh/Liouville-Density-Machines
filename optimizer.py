@@ -53,6 +53,7 @@ class NatGradExact():
         E = p@np.abs(L_loc)**2
         ox = p@np.conj(O)
 
+        # ⟨O(E-⟨E⟩)⟩ appears to be more stable
         f = np.conj(OE) - p@np.conj(O) * E
 
         #### Fischer Matrix
